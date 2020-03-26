@@ -665,6 +665,7 @@ KBUILD_CFLAGS	+= $(call cc-option, -mllvm -polly) \
 		   $(call cc-option, -mllvm -polly-detect-keep-going) \
 		   $(call cc-option, -mllvm -polly-vectorizer=stripmine) \
 		   $(call cc-option, -mllvm -polly-invariant-load-hoisting)
+KBUILD_CFLAGS += -mcpu=cortex-a53 -mtune=cortex-a53
 else
 KBUILD_CFLAGS	+= -O2
 endif
